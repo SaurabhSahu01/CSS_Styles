@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS animations</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap');
+
+    :root {
+        --top1: ;
+        --left1: ;
+        --color1: ;
+        --size1: ;
+        --top2: ;
+        --left2: ;
+        --color2: ;
+        --size2: ;
+    }
+
+    body {
+        background-color: black;
+    }
+
+    .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
+
+    .container h2 {
+        height: 60px;
+        width: 60px;
+        font-family: 'Rubik Moonrocks', cursive;
+        font-size: 60px;
+        color: cyan;
+        text-shadow: 2px 2px 8px white, 2px 2px 9px blue;
+    }
+
+    .container h2::after {
+        content: "";
+        font-family: 'Rubik Moonrocks', cursive;
+        font-size: 60px;
+        animation-name: dotMovement;
+        animation-duration: 1s;
+        animation-delay: 0s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+    }
+
+
+    @keyframes dotMovement {
+        0% {
+            color: cyan;
+            text-shadow: 2px 2px 8px white, 2px 2px 9px blue;
+            content: "";
+        }
+
+        33% {
+            color: cyan;
+            text-shadow: 2px 2px 8px white, 2px 2px 9px blue;
+            content: ".";
+        }
+
+        66% {
+            color: cyan;
+            text-shadow: 2px 2px 8px white, 2px 2px 9px blue;
+            content: "..";
+        }
+
+        99% {
+            color: cyan;
+            text-shadow: 2px 2px 8px white, 2px 2px 9px blue;
+            content: "...";
+        }
+    }
+
+    .circle {
+        height: 60px;
+        width: 60px;
+        position: absolute;
+        z-index: -1;
+        background-color: red;
+        border-radius: 200px;
+        animation-name: circles1;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-delay: 0s;
+        animation-timing-function: ease-in-out;
+    }
+    .circle2 {
+        height: 60px;
+        width: 60px;
+        position: absolute;
+        z-index: -2;
+        background-color: yellow;
+        border-radius: 200px;
+        animation-name: circles2;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-delay: 0s;
+        animation-timing-function: ease-in-out;
+    }
+
+    @keyframes circles1 {
+        0% {
+            top: var(--top1);
+            left: var(--left1);
+            background-color: var(--color1);
+            height: var(--size1);
+            width: var(--size1);
+        }
+
+        25% {
+            top: var(--top1);
+            left: var(--left1);
+            background-color: var(--color1);
+            height: var(--size1);
+            width: var(--size1);
+        }
+
+        50% {
+            top: var(--top1);
+            left: var(--left1);
+            background-color: var(--color1);
+            height: var(--size1);
+            width: var(--size1);
+        }
+
+        75% {
+            top: var(--top1);
+            left: var(--left1);
+            background-color: var(--color1);
+            height: var(--size1);
+            width: var(--size1);
+        }
+
+        100% {
+            top: var(--top1);
+            left: var(--left1);
+            background-color: var(--color1);
+            height: var(--size1);
+            width: var(--size1);
+        }
+    }
+    @keyframes circles2 {
+        0% {
+            top: var(--top2);
+            left: var(--left2);
+            background-color: var(--color2);
+            height: var(--size2);
+            width: var(--size2);
+        }
+        25% {
+            top: var(--top2);
+            left: var(--left2);
+            background-color: var(--color2);
+            height: var(--size2);
+            width: var(--size2);
+        }
+        50% {
+            top: var(--top2);
+            left: var(--left2);
+            background-color: var(--color2);
+            height: var(--size2);
+            width: var(--size2);
+        }
+        75% {
+            top: var(--top2);
+            left: var(--left2);
+            background-color: var(--color2);
+            height: var(--size2);
+            width: var(--size2);
+        }
+        100% {
+            top: var(--top2);
+            left: var(--left2);
+            background-color: var(--color2);
+            height: var(--size2);
+            width: var(--size2);
+        }   
+    }
+</style>
+<script>
+    const r = document.querySelector(':root');
+    setInterval(() => {
+        const colors = [
+            "AliceBlue",
+            "AntiqueWhite",
+            "Aqua",
+            "Aquamarine",
+            "Azure",
+            "Beige",
+            "Bisque",
+            "Black",
+            "BlanchedAlmond",
+            "Blue",
+            "BlueViolet",
+            "Brown",
+            "BurlyWood",
+            "CadetBlue",
+            "Chartreuse",
+            "Chocolate",
+            "Coral",
+            "CornflowerBlue",
+            "Cornsilk",
+            "Crimson",
+            "Cyan",
+            "DarkBlue",
+            "DarkCyan",
+            "DarkGoldenRod",
+            "DarkGray",
+            "DarkGrey",
+            "DarkGreen",
+            "DarkKhaki",
+            "DarkMagenta",
+            "DarkOliveGreen",
+            "DarkOrange",
+            "DarkOrchid",
+            "DarkRed",
+            "DarkSalmon",
+            "DarkSeaGreen",
+            "DarkSlateBlue",
+            "DarkSlateGray",
+            "DarkSlateGrey",
+            "DarkTurquoise",
+            "DarkViolet",
+            "DeepPink",
+            "DeepSkyBlue",
+            "DimGray",
+            "DimGrey",
+            "DodgerBlue",
+            "FireBrick",
+            "FloralWhite",
+            "ForestGreen",
+            "Fuchsia",
+            "Gainsboro",
+            "GhostWhite",
+            "Gold",
+            "GoldenRod",
+            "Gray",
+            "Grey",
+            "Green",
+            "GreenYellow",
+            "HoneyDew",
+            "HotPink",
+            "IndianRed",
+            "Indigo",
+            "Ivory",
+            "Khaki",
+            "Lavender",
+            "LavenderBlush",
+            "LawnGreen",
+            "LemonChiffon",
+            "LightBlue",
+            "LightCoral",
+            "LightCyan",
+            "LightGoldenRodYellow",
+            "LightGray",
+            "LightGrey",
+            "LightGreen",
+            "LightPink",
+            "LightSalmon",
+            "LightSeaGreen",
+            "LightSkyBlue",
+            "LightSlateGray",
+            "LightSlateGrey",
+            "LightSteelBlue",
+            "LightYellow",
+            "Lime",
+            "LimeGreen",
+            "Linen",
+            "Magenta",
+            "Maroon",
+            "MediumAquaMarine",
+            "MediumBlue",
+            "MediumOrchid",
+            "MediumPurple",
+            "MediumSeaGreen",
+            "MediumSlateBlue",
+            "MediumSpringGreen",
+            "MediumTurquoise",
+            "MediumVioletRed",
+            "MidnightBlue",
+            "MintCream",
+            "MistyRose",
+            "Moccasin",
+            "NavajoWhite",
+            "Navy",
+            "OldLace",
+            "Olive",
+            "OliveDrab",
+            "Orange",
+            "OrangeRed",
+            "Orchid",
+            "PaleGoldenRod",
+            "PaleGreen",
+            "PaleTurquoise",
+            "PaleVioletRed",
+            "PapayaWhip",
+            "PeachPuff",
+            "Peru",
+            "Pink",
+            "Plum",
+            "PowderBlue",
+            "Purple",
+            "RebeccaPurple",
+            "Red",
+            "RosyBrown",
+            "RoyalBlue",
+            "SaddleBrown",
+            "Salmon",
+            "SandyBrown",
+            "SeaGreen",
+            "SeaShell",
+            "Sienna",
+            "Silver",
+            "SkyBlue",
+            "SlateBlue",
+            "SlateGray",
+            "SlateGrey",
+            "Snow",
+            "SpringGreen",
+            "SteelBlue",
+            "Tan",
+            "Teal",
+            "Thistle",
+            "Tomato",
+            "Turquoise",
+            "Violet",
+            "Wheat",
+            "White",
+            "WhiteSmoke",
+            "Yellow",
+            "YellowGreen",
+        ];
+        let randomColor1 = '' + colors[Math.floor(Math.random() * (colors.length))];
+        let topRandom1 = Math.floor(Math.random() * 80)+'%';
+        let leftRandom1 = Math.floor(Math.random() * 80)+'%';
+        let randomSize1 = (60 + Math.floor(Math.random() * 300)) + 'px';
+        let randomColor2 = '' + colors[Math.floor(Math.random() * (colors.length))];
+        let topRandom2 = Math.floor(Math.random() * 80)+'%';
+        let leftRandom2 = Math.floor(Math.random() * 80)+'%';
+        let randomSize2 = (60 + Math.floor(Math.random() * 300)) + 'px';
+    
+        r.style.setProperty('--top1', topRandom1);
+        r.style.setProperty('--left1', leftRandom1);
+        r.style.setProperty('--color1', randomColor1);
+        r.style.setProperty('--size1', randomSize1);
+
+        r.style.setProperty('--top2', topRandom2);
+        r.style.setProperty('--left2', leftRandom2);
+        r.style.setProperty('--color2', randomColor2);
+        r.style.setProperty('--size2', randomSize2);
+    }, 1000);
+</script>
+
+<body>
+    <div class="container">
+        <h2>Loading</h2>
+    </div>
+    <div class="circle"></div>
+    <div class="circle2"></div>
+</body>
+
+</html>
