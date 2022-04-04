@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+</head>
+<style>
+    :root {
+        --color: rgba(205, 34, 25, 255);
+    }
+
+    body {
+        margin: 0px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        height: 50px;
+        width: 100%;
+        position: sticky;
+        top: 0px;
+    }
+
+    nav .mainIcon img {
+        height: 50px;
+        width: 50px;
+        box-sizing: border-box;
+        padding: 10px;
+    }
+
+    .search input[type="text"] {
+        height: 30px;
+        width: 25vw;
+        margin: 6px;
+        border: 1px solid var(--color);
+        border-radius: 10px;
+    }
+
+    .search input[type="submit"] {
+        height: 30px;
+        background-color: var(--color);
+        border: none;
+        color: white;
+        border-radius: 7px;
+    }
+
+    .search {
+        width: fit-content;
+        margin: auto 10vw;
+    }
+
+    .search ::placeholder {
+        color: var(--color);
+        opacity: 0.5;
+    }
+
+    nav .icons {
+        display: flex;
+    }
+    .icons{
+        position: absolute;
+        right: 10px;
+        margin-left: 2px;
+    }
+    .icons img{
+        height: 30px;
+        width: 30px;
+        box-sizing: border-box;
+        margin: 10px 2px;
+        padding: 4px;
+    }
+    @media (min-width: 450px){
+        .icons img{
+        height: 30px;
+        width: 30px;
+        box-sizing: border-box;
+        margin: 10px 5px;
+        padding: 4px;
+    }
+    }
+    @media (max-width: 449px){
+        .search {
+        width: fit-content;
+        margin: auto 0vw;
+    }
+    }
+</style>
+
+<body>
+    <nav>
+        <div class="mainIcon">
+            <img src="https://cdn-icons-png.flaticon.com/128/174/174865.png" alt="Quora">
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Search">
+            <input type="submit" value="Search">
+        </div>
+        <div class="icons">
+            <img src="https://cdn-icons-png.flaticon.com/128/20/20176.png" alt="Home">
+            <img src="https://cdn-icons.flaticon.com/png/128/2280/premium/2280294.png?token=exp=1649097953~hmac=c18d44ff17d64b1ef3639cd1605bb982"
+                alt="Reading Section">
+            <img src="https://cdn-icons-png.flaticon.com/128/1827/1827349.png" alt="Notification">
+        </div>
+    </nav>
+</body>
+
+</html>
